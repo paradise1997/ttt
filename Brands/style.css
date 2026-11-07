@@ -1,0 +1,123 @@
+.page-hero {
+  position: relative;
+  display: flex;
+  min-height: 290px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: 38px 20px;
+  background:
+    radial-gradient(ellipse at 82% 32%, rgb(181 138 80 / 23%), transparent 29%),
+    radial-gradient(ellipse at 12% 110%, rgb(232 216 197 / 90%), transparent 48%),
+    linear-gradient(115deg, #f8f2eb, #eadbc9 55%, #f5ece1);
+  text-align: center;
+}
+
+.page-hero::after {
+  position: absolute;
+  right: 12%;
+  bottom: -96px;
+  width: 270px;
+  height: 270px;
+  border: 1px solid rgb(167 122 61 / 25%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 24px rgb(255 255 255 / 10%), 0 0 0 48px rgb(167 122 61 / 8%);
+  content: "";
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #A77A3D;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.page-hero h1 {
+  margin: 0 0 12px;
+  color: #30241C;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 6vw, 64px);
+  font-weight: 500;
+}
+
+.page-hero > p:last-child {
+  margin: 0;
+  color: #65594E;
+  font-size: clamp(16px, 2vw, 20px);
+}
+
+.all-brands {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 52px clamp(20px, 5vw, 64px) 72px;
+}
+
+.section-heading {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  margin: 0 0 10px;
+  color: #30241C;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 500;
+}
+
+.section-heading > p:last-child {
+  margin: 0;
+  color: #65594E;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.brand-list {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid #dfd1c2;
+}
+
+.brand-list a {
+  padding: 16px 14px;
+  border-bottom: 1px solid #dfd1c2;
+  color: #493528;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.brand-list a:hover,
+.brand-list a:focus-visible {
+  background: #ede1d4;
+  color: #A77A3D;
+}
+
+@media (max-width: 700px) {
+  .brand-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    min-height: 240px;
+  }
+
+  .all-brands {
+    padding: 36px 16px 48px;
+  }
+
+  .brand-list a {
+    padding: 14px 8px;
+    font-size: 14px;
+  }
+}
